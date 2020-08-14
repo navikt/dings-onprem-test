@@ -1,0 +1,20 @@
+namespace: plattformsikkerhet
+team: plattformsikkerhet
+ingresses:
+  - https://dings-onprem-test.prod.adeo.no
+env:
+  - name: APPLICATION_PORT
+    value: 8080
+  - name: OIDC_ISSUER_NAME
+    value: tokenDings
+  - name: MOCK_ENABLED
+    value: false
+  - name: OIDC_DISCOVERY_URL
+    value: "https://tokendings.prod-gcp.nais.io/.well-known/oauth-authorization-server"
+  - name: OIDC_ACCEPTED_AUDIENCE
+    value: prod-gcp:plattformsikkerhet:dings-onprem-test
+replicas:
+  min: 1
+  max: 1
+outbound-host:
+  - tokendings.prod-gcp.nais.io
