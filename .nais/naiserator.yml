@@ -41,6 +41,7 @@ spec:
     requests:
       cpu: 600m
       memory: 3Gi
+  webproxy: true
   cpuThresholdPercentage: 80
   env:
   {{#each env}}
