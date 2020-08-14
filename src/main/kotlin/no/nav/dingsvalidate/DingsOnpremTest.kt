@@ -42,7 +42,7 @@ fun Application.module(enableMock: Boolean = this.environment.config.property("n
         if (enableMock)
             tokenValidationSupport(config = config, resourceRetriever = mockResourceRetriever)
         else
-            tokenValidationSupport(config = config, resourceRetriever = HttpClientResourceRetriever(defaultHttpClient))
+            tokenValidationSupport(config = config)
     }
 
     install(Routing) {
