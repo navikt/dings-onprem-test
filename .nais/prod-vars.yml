@@ -1,7 +1,7 @@
 namespace: plattformsikkerhet
 team: plattformsikkerhet
 ingresses:
-  - https://dings-onprem-test.prod.adeo.no
+  - https://dings-onprem-test.adeo.no
 env:
   - name: APPLICATION_PORT
     value: 8080
